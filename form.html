@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+
+
+<head>
+    <body>
+    <meta charset="UTF-8">
+    <title>Pertemuan 2 HTML Lanjutan</title>
+    <style>
+        
+        body { font-family: sans-serif; margin: 20px; }
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="tel"], select, textarea {
+            display: block;
+            margin-bottom: 15px;
+            width: 300px;
+            padding: 5px;
+        }
+        fieldset {
+            width: 300px;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        fieldset label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .row { display: flex; gap: 15px; }
+        .row div { display: inline-block; }
+        .row input { display: block; }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+        
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
+
+        <label for="email_utama">Email</label>
+        <input type="email" id="email_utama" name="email_utama">
+
+        <div class="row">
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div>
+                <label for="tgl_lahir">Tanggal lahir</label>
+                <input type="date" id="tgl_lahir" name="tgl_lahir">
+            </div>
+        </div>
+        <label for="telepon">Nomor telepon</label>
+        <input type="tel" id="telepon" name="telepon">
+        <label for="foto">Foto</label>
+        <input type="file" id="foto" name="foto" accept=".jpg,.jpeg,.png">
+        <fieldset>
+            <legend>Jenis Kelamin</legend>
+            <label>
+                <input type="radio" name="jenis_kelamin" value="L">
+                Laki-laki
+            </label>
+            <label>
+                <input type="radio" name="jenis_kelamin" value="P">
+                Perempuan
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Minat</legend>
+            <label><input type="checkbox" name="minat[]" value="web"> Web</label>
+            <label><input type="checkbox" name="minat[]" value="mobile"> Mobile</label>
+            <label><input type="checkbox" name="minat[]" value="data"> Data</label>
+        </fieldset>
+
+        <label for="prodi">Program Studi</label>
+        <select id="prodi" name="prodi" required>
+            <option value="">-- Pilih Program Studi --</option>
+            <option value="ti">Teknik Informatika</option>
+            <option value="si">Sistem Informasi</option>
+        </select>
+
+        <label for="alamat">Alamat</label>
+        <textarea id="alamat" name="alamat" rows="4"></textarea>
+
+        <label for="kota">Kota</label>
+        <input list="daftar-kota" id="kota" name="kota">
+        <datalist id="daftar-kota">
+            <option value="Jakarta">
+            <option value="Tangerang">
+            <option value="Depok">
+            <option value="Bekasi">
+        </datalist>
+
+    </form>
+</body>
+</html>
+    </body>
+</head>
+</html>
